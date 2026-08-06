@@ -1,0 +1,35 @@
+# config/defaults.yaml
+data:
+  base_dir: "/home/aristeidismp/Desktop/Aristeidis_Michailis_Patselis/Academia/Patra-Physics/Traineeship/Codes/Data_Sets/"
+  files:
+    z: "c_z_vals.txt"
+    H: "c_H_vals.txt"
+    sigma: "c_sigma_vals.txt"
+
+models:
+  h0_bounds: [40.0, 100.0]
+  om_bounds: [0.01, 0.99]
+  # Model-specific bounds are in each model's config
+
+mcmc:
+  nwalkers: 32
+  nsteps: 3000
+  discard: 500
+  thin: 15
+  parallel: true
+
+contours:
+  grid_size: 60
+  levels_2d: [2.30, 6.18, 11.83]
+  levels_1d: [1.0, 4.0, 9.0]
+
+optimization:
+  n_multistart: 8
+  de_maxiter: 200
+  de_popsize: 20
+  nelder_mead_maxiter: 5000
+
+plotting:
+  dpi: 300
+  figsize: [10, 8]
+  use_latex: true
