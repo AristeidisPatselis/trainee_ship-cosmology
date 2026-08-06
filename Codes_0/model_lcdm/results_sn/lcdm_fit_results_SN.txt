@@ -1,0 +1,12 @@
+# LCDM Fit Results (Pantheon+ Type Ia SNe)
+# =========================================
+N_SNe used    = 1701
+Used full covariance matrix = True
+Omega_m       = 0.361206 +/- 0.018465
+Omega_Lambda  = 0.638794 +/- 0.018465
+H_0           = 72.839701 +/- 0.228743
+chi^2         = 1752.522810
+dof           = 1699
+chi^2_reduced = 1.031503
+MCMC Omega_m  = 0.361182 (+0.018976 / -0.018178)
+MCMC H_0      = 72.841562 (+0.225312 / -0.227182)

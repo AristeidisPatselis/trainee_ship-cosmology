@@ -1,0 +1,24 @@
+MODEL COMPARISON TABLE (delta=4 fixed, alpha free)
+================================================================================
+Parameter       delta=4 + alpha      LambdaCDM           
+--------------------------------------------------------------------------------
+H0              73.34                68.15               
+Ωm,0            0.990                0.320               
+alpha           1.460                0.000 (fixed)       
+δ               4.0 (fixed)          0 (fixed)           
+χ²              14.50                14.50               
+k               3                    2                   
+dof             28                   29                  
+χ²/dof          0.52                 0.50                
+AIC             20.50                18.50               
+ΔAIC            +2.00                0 (reference)       
+BIC             24.80                21.37               
+ΔBIC            +3.43                0 (reference)       
+================================================================================
+
+NOTE: delta=4 + alpha has k=3 free parameters, while LambdaCDM has k=2.
+
+INTERPRETATION:
+----------------------------------------
+○ Models are essentially equivalent by AIC
+✗ LambdaCDM is preferred by BIC

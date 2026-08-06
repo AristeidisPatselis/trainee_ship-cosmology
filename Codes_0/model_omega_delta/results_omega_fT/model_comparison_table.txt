@@ -1,0 +1,9 @@
+Model          k   dof      chi2   chi2/dof       AIC     dAIC       BIC     dBIC       DIC     dDIC
+--------------------------------------------------------------------------------------------
+f1CDM          3    28    14.436      0.516    20.436    1.936    24.738    3.370    18.495    0.220
+f2CDM          3    28    14.500      0.518    20.500    2.000    24.802    3.434    18.275    0.000
+f3CDM          3    28    14.500      0.518    20.500    2.000    24.802    3.434    18.487    0.212
+LambdaCDM      2    29    14.500      0.500    18.500    0.000    21.368    0.000    18.476    0.201
+============================================================================================
+
+Jeffreys-scale interpretation (paper's convention): dIC<=2 statistically indistinguishable from the best model, 2<dIC<6 mild tension, dIC>=10 strong tension.

@@ -1,0 +1,23 @@
+===== BEST FIT (delta=4 fixed, alpha free) =====
+
+H0       = 73.336913 +/- 3.059644
+Om       = 0.990000 +/- 0.332776
+alpha    = 1.459614 +/- 0.320336
+delta    = 4.000000 (fixed, not a free parameter)
+
+chi2        = 14.4990
+dof         = 28
+chi2/dof    = 0.5178
+
+Acceptance fraction = 0.6004
+
+Autocorrelation times
+H0       44.43
+Om       44.45
+alpha    47.30
+
+===== MCMC =====
+
+H0       = 74.662451 (+2.527435/-2.569535)
+Om       = 0.886779 (+0.076628/-0.144309)
+alpha    = 1.577699 (+0.281829/-0.236723)

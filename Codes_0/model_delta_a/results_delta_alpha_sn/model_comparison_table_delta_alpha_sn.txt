@@ -1,0 +1,20 @@
+MODEL COMPARISON TABLE (Pantheon+SH0ES, delta and alpha both free)
+======================================================================
+Model        delta+alpha free   LambdaCDM         
+H0           72.96              72.83             
+Om,0         0.248              0.361             
+delta        1.000              0 (fixed)         
+alpha        0.010              0 (fixed)         
+chi2         1754.25            1754.57           
+k            4                  2                 
+dof          1697               1699              
+chi2/dof     1.03               1.03              
+AIC          1762.25            1758.57           
+dAIC         +3.68              0 (ref)           
+BIC          1784.01            1769.45           
+dBIC         +14.55             0 (ref)           
+======================================================================
+
+NOTE: delta+alpha free has k=4 free parameters, while LambdaCDM has k=2.
+LambdaCDM preferred by AIC
+LambdaCDM preferred by BIC
