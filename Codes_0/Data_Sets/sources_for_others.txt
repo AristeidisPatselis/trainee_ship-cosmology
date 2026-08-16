@@ -1,0 +1,121 @@
+SOURCES AND METHODOLOGY
+z_values.txt / H_values.txt / sigma_H_values.txt
+Units: H(z) and sigma_H in km/s/Mpc. Rows correspond 1-to-1 across all three files.
+
+=====================================================================
+ROW 1  z = 0.000   H = 68.000   sigma_H = 7.000
+Standard sirens (gravitational wave)
+Source: LIGO-Virgo-KAGRA Collaboration, Abbott et al. 2023 (GWTC-3),
+        "Constraints on the cosmic expansion history from GWTC-3",
+        ApJ 949, 76 (arXiv:2111.03604)
+Reported value: H0 = 68 (+8 / -6) km/s/Mpc, 68% CL
+        (dark sirens from GWTC-3 combined with the bright siren GW170817
+        and its electromagnetic counterpart, marginalized over BBH
+        population parameters)
+Note: asymmetric error (+8/-6) symmetrized to sigma = 7.0 for this file.
+
+=====================================================================
+ROW 2  z = 0.000   H = 73.900   sigma_H = 3.000
+Megamaser Cosmology Project (MCP)
+Source: Pesce, D. W. et al. 2020, "The Megamaser Cosmology Project.
+        XIII. Combined Hubble Constant Constraints",
+        ApJL 891, L1 (arXiv:2001.09213)
+Reported value: H0 = 73.9 +/- 3.0 km/s/Mpc
+        (geometric distances to 6 megamaser-hosting galaxies:
+        NGC 4258, UGC 3789, CGCG 074-064, NGC 6323, NGC 5765b, NGC 6264;
+        independent of the distance ladder and the CMB)
+
+=====================================================================
+ROW 3  z = 0.000   H = 71.600   sigma_H = 3.600
+Time-delay cosmography
+Source: TDCOSMO Collaboration, Birrer, S. et al. 2025,
+        "TDCOSMO 2025: Cosmological constraints from strong lensing
+        time delays", A&A (arXiv:2506.03023)
+Reported value: H0 = 71.6 (+3.9 / -3.3) km/s/Mpc, flat LCDM
+        (TDCOSMO-2025 sample of 8 lensed quasars, combined with
+        Omega_m constraint from Pantheon+; consistent value of
+        71.2 (+3.7/-3.6) obtained if DES-SN5YR is used instead of
+        Pantheon+ for the Omega_m prior)
+Note: asymmetric error (+3.9/-3.3) symmetrized to sigma = 3.6.
+      A higher-precision alternative from the same paper,
+      H0 = 74.3 (+3.1/-3.7), adds the SLACS+SL2S external lens
+      samples; the more conservative TDCOSMO-only number is used here.
+
+=====================================================================
+ROWS 4-9   DESI DR2 BAO, H(z) computed from D_H(z)/r_d
+Source: DESI Collaboration, Abdul Karim, M. et al. 2025,
+        "DESI DR2 Results II: Measurements of Baryon Acoustic
+        Oscillations and Cosmological Constraints",
+        Phys. Rev. D 112, 083515 (arXiv:2503.14738)
+Values of D_H/r_d and sigma taken from DESI_DR2_BAO.csv (created earlier
+in this conversation), which reproduces DESI DR2 Table IV / Table 2 of
+arXiv:2604.11106.
+
+Method: D_H(z) = c / H(z)  =>  H(z) = c / [ (D_H/r_d) x r_d ]
+  c       = 299792.458 km/s
+  r_d     = 147.05 Mpc  (DESI DR2 fiducial sound horizon at the drag
+            epoch; NOT independently re-measured here -- see caveat
+            below)
+  sigma_H = H(z) x [ sigma(D_H/r_d) / (D_H/r_d) ]
+            (fractional error carried straight through; r_d itself is
+            treated as exact, i.e. no additional uncertainty from r_d
+            is propagated)
+
+Row 4  z_eff = 0.510  (LRG1, luminous red galaxies)
+       D_H/r_d = 21.863 +/- 0.425  ->  H = 93.249 +/- 1.813
+
+Row 5  z_eff = 0.706  (LRG2, luminous red galaxies)
+       D_H/r_d = 19.455 +/- 0.330  ->  H = 104.791 +/- 1.777
+
+Row 6  z_eff = 0.934  (LRG3+ELG1, combined luminous red + emission
+       line galaxies)
+       D_H/r_d = 17.641 +/- 0.193  ->  H = 115.567 +/- 1.264
+
+Row 7  z_eff = 1.321  (ELG2, emission line galaxies)
+       D_H/r_d = 14.176 +/- 0.221  ->  H = 143.814 +/- 2.242
+
+Row 8  z_eff = 1.484  (QSO, quasars)
+       D_H/r_d = 12.817 +/- 0.516  ->  H = 159.063 +/- 6.404
+
+Row 9  z_eff = 2.330  (Lya, Lyman-alpha forest)
+       D_H/r_d = 8.632 +/- 0.101  ->  H = 236.181 +/- 2.763
+
+CAVEAT on r_d: DESI BAO alone does not measure r_d independently; it
+measures the combination D_H(z)/r_d. Using a fixed fiducial r_d to
+"unwrap" H(z) reintroduces a mild model/calibration dependence (the
+value of r_d assumed here, 147.05 Mpc, comes from the DESI DR2
+fiducial cosmology, itself close to the Planck-inferred r_d). If your
+fit is sensitive to this at the percent level, it is safer to fit
+D_H(z)/r_d directly (with r_d as a free/nuisance parameter) rather
+than these derived H(z) values, or to fold in the r_d uncertainty
+(~0.1-0.2%) into sigma_H.
+
+=====================================================================
+EXCLUDED FROM THIS DATASET (could not be reduced to a clean z, H, sigma_H
+triplet without introducing model-dependence disguised as "direct" data):
+
+- DESI DR2 BGS point (z_eff = 0.295): only D_V/r_d = 7.942 +/- 0.075 is
+  reported. D_V = [z D_M^2 D_H]^(1/3) mixes D_M and D_H; with one
+  equation and two unknowns, D_H (and hence H(z)) cannot be isolated
+  without assuming a cosmological model for the D_M/D_H ratio.
+
+- BAOtr / angular BAO compilation (15 points, Nunes et al. 2020,
+  arXiv:2002.09293; used in Pantos & Perivolaropoulos 2026,
+  arXiv:2604.11106): reports D_M(z)/r_d only, from theta_BAO(z).
+  D_M(z) = integral of c dz'/H(z'), so H(z) is only recoverable by
+  differentiating a fitted D_M(z) curve across points -- inherently
+  model/interpolation-dependent, not a per-point measurement.
+
+- DES-SN5YR (Vincenzi et al. 2024, Sanchez et al. 2024): a Type Ia
+  supernova magnitude-redshift compilation. SNe alone constrain the
+  shape of the distance-redshift relation (Omega_m, w) but not its
+  absolute normalization; there is no calibrated H0 (or H(z)) reported
+  from DES-SN5YR standalone, only in combination with an external
+  distance-ladder calibrator (e.g. SH0ES Cepheids), which was not
+  requested here.
+
+If you want H(z) constraints usable from BAOtr or DES-SN5YR, the
+correct approach is to include their native observables (D_M/r_d,
+or the SN Hubble diagram + covariance) directly in the emcee
+likelihood alongside H(z) points, rather than trying to convert them
+to H(z) beforehand.
