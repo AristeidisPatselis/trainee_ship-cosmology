@@ -119,3 +119,12 @@ correct approach is to include their native observables (D_M/r_d,
 or the SN Hubble diagram + covariance) directly in the emcee
 likelihood alongside H(z) points, rather than trying to convert them
 to H(z) beforehand.
+
+=====================================================================
+
+Cosmic Chronometers: https://academic.oup.com/mnras/article/523/3/3406/7188316?login=true
+
+Radial BAO: https://academic.oup.com/mnras/article/521/4/5473/7087284?login=true
+
+DESI DR1 BAO: https://arxiv.org/pdf/2404.03002
+
