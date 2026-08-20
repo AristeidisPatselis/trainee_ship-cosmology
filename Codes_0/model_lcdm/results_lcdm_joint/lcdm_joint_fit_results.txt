@@ -1,0 +1,12 @@
+# Joint Lambda-CDM Fit Results [H(z) + Pantheon+]
+# ================================================
+N_H(z) points   = 77
+N_Pantheon+     = 1701
+Best-fit Om_m0  = 0.234877
+Best-fit H0     = 74.058358
+Min Chi^2       = 1878.536074
+dof             = 1776
+Reduced Chi^2   = 1.057734
+R-hat (Om, H0)  = 1.0049, 1.0061
+MCMC Om_m0      = 0.235036 (+0.004698 / -0.004724)
+MCMC H0         = 74.056404 (+0.149053 / -0.151304)
